@@ -1,0 +1,134 @@
+nav {
+    background-color: rgb(61, 61, 61);
+    overflow: hidden;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+nav > ul {
+    list-style-type: none;
+}
+
+nav > ul {
+    text-decoration: none;
+    color: white;
+
+}
+
+.left_links {
+    float: left;
+}
+
+.right_links {
+    float: right;
+}
+
+.middle_link {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 80px;
+    padding: 20px;
+    font-size: 25px;
+}
+
+.off-screen-menu {
+    background-color: rgb(123, 123, 123);
+    text-align: center;
+}
+
+.off-screen-menu-hide {
+    display: none;
+}
+
+.off-screen-menu > ul {
+    list-style-type: none;
+    color: white;
+}
+
+.off-screen-menu > ul > li {
+    padding: 20px 0;
+}
+
+.off-screen-menu > ul > li:hover {
+    font-weight: bold;
+    border: 1px solid white;
+}
+
+.links {
+    display: block;
+    /* float: left; */
+    padding: 25px;
+    font-weight: bold;  
+}
+
+.links:hover {
+    background-color: rgb(105, 105, 105);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.active {
+    background-color: rgb(163, 163, 163);
+}
+
+
+.ham-menu {
+    height: 50px;
+    width: 40px;
+    margin-left: 0px;
+    margin: auto 15px;
+    position: relative;
+    display: none;
+}
+
+.ham-menu span {
+    height: 5px;
+    width: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+
+.ham-menu span:nth-child(1) {
+    top: 25%;
+}
+
+.ham-menu span:nth-child(3) {
+    top: 75%;
+}
+
+@media (max-width: 530px) {
+    .middle_link {
+        margin-left: 0px;
+        margin-right: 0px;
+        position: relative;
+        /* color: green; */
+    }
+
+    nav > ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .ham-menu {
+        display: block;
+    }
+
+}
+
+@media (min-width: 531px) {
+    .off-screen-menu {
+        display: none;
+    }
+}
